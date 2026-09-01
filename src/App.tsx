@@ -8,6 +8,7 @@ import Rescue from './components/Rescue'
 import Process from './components/Process'
 import QuoteMarquee from './components/QuoteMarquee'
 import WhyUs from './components/WhyUs'
+import Team from './components/Team'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 
@@ -25,6 +26,7 @@ function App() {
         <Process />
         <QuoteMarquee />
         <WhyUs />
+        <Team />
         <ContactSection />
       </main>
       <Footer />

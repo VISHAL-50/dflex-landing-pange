@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dflexprostudios.com/sitemap.xml
+Sitemap: https://dflexpro.in/sitemap.xml

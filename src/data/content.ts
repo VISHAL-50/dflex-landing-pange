@@ -23,10 +23,32 @@ export const BUDGET_RANGES = [
 export const NAV_LINKS = [
   { label: 'Services', href: '#services' },
   { label: 'Work', href: '#work' },
-  { label: 'Rescue', href: '#rescue' },
+  { label: 'Team', href: '#team' },
   { label: 'Process', href: '#process' },
-  { label: 'Why Us', href: '#why-us' },
   { label: 'Contact', href: '#contact' },
+]
+
+export const TEAM = [
+  {
+    role: 'Software Engineers',
+    icon: 'code',
+    desc: 'Full-stack devs who ship production code — not just prototypes that break in the demo.',
+  },
+  {
+    role: 'Graphic Designers',
+    icon: 'palette',
+    desc: 'Brand identity, UI, and marketing creatives — visuals that make you look like the real company you are.',
+  },
+  {
+    role: 'Video Editors',
+    icon: 'clapperboard',
+    desc: 'Reels, ads, product walkthroughs, demo videos — cut and polished to actually hold attention.',
+  },
+  {
+    role: 'Social Media Managers',
+    icon: 'megaphone',
+    desc: 'We plan, post, and manage your socials so your online presence grows while you run the business.',
+  },
 ]
 
 export const CLIENTS = [
