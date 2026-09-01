@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dflexprostudios.com/sitemap.xml
