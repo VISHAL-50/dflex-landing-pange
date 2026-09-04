@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 import { SERVICES } from '../data/content'
 
 export default function Services() {
@@ -44,6 +46,14 @@ export default function Services() {
                   </span>
                 ))}
               </div>
+
+              <Link
+                to={`/services/${service.slug}`}
+                className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-accent-light hover:text-white"
+              >
+                Learn more
+                <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
             </motion.div>
           ))}
         </div>

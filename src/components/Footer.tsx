@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Linkedin, Mail } from 'lucide-react'
 import { CONTACT_EMAIL, LINKEDIN_URL, NAV_LINKS } from '../data/content'
 import logo from '../assets/logo/dflexpro-dark.png'
@@ -40,13 +41,13 @@ export default function Footer() {
 
           <div className="flex flex-wrap gap-x-10 gap-y-4">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="text-sm text-white/60 transition-colors hover:text-white"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

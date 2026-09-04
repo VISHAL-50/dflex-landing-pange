@@ -1,36 +1,22 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import TrustMarquee from './components/TrustMarquee'
-import BigStatement from './components/BigStatement'
-import Services from './components/Services'
-import Clients from './components/Clients'
-import Rescue from './components/Rescue'
-import Process from './components/Process'
-import QuoteMarquee from './components/QuoteMarquee'
-import WhyUs from './components/WhyUs'
-import Team from './components/Team'
-import ContactSection from './components/ContactSection'
-import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import RootLayout from './layouts/RootLayout'
+import Home from './pages/Home'
+import ServiceDetail from './pages/ServiceDetail'
+import BlogIndex from './pages/BlogIndex'
+import BlogPost from './pages/BlogPost'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <div className="min-h-screen bg-ink">
-      <Navbar />
-      <main>
-        <Hero />
-        <TrustMarquee />
-        <BigStatement />
-        <Services />
-        <Clients />
-        <Rescue />
-        <Process />
-        <QuoteMarquee />
-        <WhyUs />
-        <Team />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<RootLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
+        <Route path="/blog" element={<BlogIndex />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   )
 }
 
