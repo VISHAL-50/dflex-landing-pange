@@ -1,6 +1,6 @@
 export const CONTACT_EMAIL = 'dflexprostudios@gmail.com'
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/dflexpro-studios/'
-export const SITE_URL = 'https://dflexpro.in'
+export const SITE_URL = 'https://www.dflexpro.in'
 
 export const PROJECT_TYPES = [
   'Enterprise Software',
