@@ -1,58 +1,71 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://dflexpro.in/</loc>
+    <loc>https://www.dflexpro.in/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://dflexpro.in/services/enterprise-software-development</loc>
+    <loc>https://www.dflexpro.in/services/enterprise-software-development</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://dflexpro.in/services/saas-development</loc>
+    <loc>https://www.dflexpro.in/services/saas-development</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://dflexpro.in/services/product-engineering</loc>
+    <loc>https://www.dflexpro.in/services/product-engineering</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://dflexpro.in/services/software-support-maintenance</loc>
+    <loc>https://www.dflexpro.in/services/software-support-maintenance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://dflexpro.in/services/project-rescue</loc>
+    <loc>https://www.dflexpro.in/services/project-rescue</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://dflexpro.in/services/outsourced-development-teams</loc>
+    <loc>https://www.dflexpro.in/services/outsourced-development-teams</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://dflexpro.in/blog</loc>
+    <loc>https://www.dflexpro.in/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://dflexpro.in/blog/signs-your-software-project-needs-rescue</loc>
+    <loc>https://www.dflexpro.in/blog/signs-your-software-project-needs-rescue</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://dflexpro.in/blog/saas-mvp-development-roadmap</loc>
+    <loc>https://www.dflexpro.in/blog/saas-mvp-development-roadmap</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://dflexpro.in/blog/how-to-choose-a-software-development-company</loc>
+    <loc>https://www.dflexpro.in/blog/how-to-choose-a-software-development-company</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
 </urlset>
