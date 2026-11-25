@@ -11,15 +11,15 @@ body {
 }
 
 ::selection {
-  background: #4f3df6;
-  color: white;
+  background: #d4ff3a;
+  color: #07070b;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #05050a;
+  background: #07070b;
 }
 ::-webkit-scrollbar-thumb {
   background: #2a2350;
@@ -48,4 +48,55 @@ body {
 .mask-fade-x {
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* ---------- Gen-Z punch layer ---------- */
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-pop/30 bg-pop/10 px-3.5 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-pop;
+  }
+  .eyebrow::before {
+    content: '✦';
+    @apply text-hot;
+  }
+  .heading {
+    @apply font-chunky text-[2.1rem] font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-[3.6rem];
+  }
+  .btn-pop {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-ink bg-pop px-7 py-3.5 text-sm font-bold text-ink shadow-[4px_4px_0_0_#ff4fd8] transition-all duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_0_#ff4fd8] active:translate-x-1 active:translate-y-1 active:shadow-none;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 px-7 py-3.5 text-sm font-bold text-white transition-colors hover:border-white hover:bg-white hover:text-ink;
+  }
+  .sticker {
+    @apply inline-flex items-center gap-1.5 rounded-xl border-2 border-ink px-3 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wide text-ink shadow-[3px_3px_0_0_rgba(0,0,0,0.9)];
+  }
+  .card {
+    @apply relative rounded-3xl border border-white/10 bg-white/[0.035] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-pop/50 hover:bg-white/[0.06] hover:shadow-[0_20px_60px_-20px_rgba(212,255,58,0.25)];
+  }
+}
+
+.text-stroke {
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.85);
+  color: transparent;
+}
+
+.text-gradient-pop {
+  background: linear-gradient(90deg, #d4ff3a 0%, #7dffb8 40%, #ff4fd8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Tone down big motion, but keep the slow marquee strips running. */
+  .animate-blob,
+  .animate-blob-slow,
+  .animate-float,
+  .animate-wiggle {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

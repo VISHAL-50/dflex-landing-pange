@@ -10,9 +10,9 @@ export default function NotFound() {
         description="This page doesn't exist — head back to DflexPro Studios."
         noindex
       />
-      <div className="mx-auto max-w-lg px-6 text-center">
-        <p className="font-accent text-8xl italic text-pop">404.</p>
-        <h1 className="mt-4 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+      <div className="mx-auto max-w-lg px-5 sm:px-6 text-center">
+        <p className="font-chunky text-8xl font-black text-pop">404.</p>
+        <h1 className="mt-5 font-chunky text-2xl font-extrabold tracking-tight sm:text-3xl">
           This page shipped to nowhere.
         </h1>
         <p className="mt-4 text-white/60">
@@ -20,7 +20,7 @@ export default function NotFound() {
         </p>
         <Link
           to="/"
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-ink transition-transform hover:scale-105"
+          className="mt-8 btn-pop"
         >
           Back to home
           <ArrowRight size={17} />

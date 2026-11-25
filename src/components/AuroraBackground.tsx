@@ -3,14 +3,14 @@ interface AuroraBackgroundProps {
   className?: string
 }
 
-export default function AuroraBackground({ videoSrc = '/videos/hero-loop.mp4', className = '' }: AuroraBackgroundProps) {
+export default function AuroraBackground({ videoSrc = '', className = '' }: AuroraBackgroundProps) {
   return (
     <div className={`absolute inset-0 overflow-hidden bg-ink ${className}`}>
-      <div className="absolute inset-0 bg-brand-gradient" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,#2a1260_0%,#07070b_55%)]" />
 
-      <div className="absolute -top-32 -left-20 h-[32rem] w-[32rem] rounded-full bg-accent/40 blur-[110px] animate-blob" />
-      <div className="absolute top-1/3 -right-32 h-[28rem] w-[28rem] rounded-full bg-cyber/20 blur-[110px] animate-blob-slow" />
-      <div className="absolute bottom-0 left-1/4 h-[24rem] w-[24rem] rounded-full bg-accent-light/30 blur-[100px] animate-blob" />
+      <div className="absolute -top-32 -left-20 h-[32rem] w-[32rem] rounded-full bg-accent/45 blur-[120px] animate-blob" />
+      <div className="absolute top-1/3 -right-32 h-[28rem] w-[28rem] rounded-full bg-hot/25 blur-[120px] animate-blob-slow" />
+      <div className="absolute bottom-0 left-1/4 h-[24rem] w-[24rem] rounded-full bg-pop/15 blur-[110px] animate-blob" />
 
       {/* Optional looping brand video — drop an .mp4 at public/videos/hero-loop.mp4 and it takes over automatically. */}
       <video

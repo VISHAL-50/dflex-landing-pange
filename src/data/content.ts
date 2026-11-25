@@ -8,6 +8,7 @@ export const PROJECT_TYPES = [
   'Project Rescue',
   'Outsourced Dev Team',
   'Support & Maintenance',
+  'Automation & AI Workflows',
   'Something else',
 ]
 
@@ -66,10 +67,10 @@ export const CLIENTS = [
     url: 'https://thecloudriva.com/',
   },
   {
-    name: 'PositiivPlus',
-    industry: 'Enterprise SaaS',
-    desc: 'All-in-one ESG & sustainability platform for emissions tracking, team training, and compliance reporting.',
-    url: 'https://www.positiivplus.com/',
+    name: 'PropAgreement',
+    industry: 'PropTech / Legal',
+    desc: 'Online registered rent agreements across Maharashtra — expert drafting, doorstep biometrics, and the registered copy on WhatsApp, often within 24 hours.',
+    url: 'https://propagreement.in/',
   },
   {
     name: 'Ace Fans',
@@ -275,6 +276,39 @@ export const SERVICES = [
       {
         q: 'Can we scale the team size up or down mid-project?',
         a: 'Yes — that flexibility is the main point of this model. We adjust as your roadmap and budget change.',
+      },
+    ],
+  },
+  {
+    tag: '07',
+    slug: 'business-automation',
+    title: 'Automation & AI Workflows',
+    metaTitle: 'Business Process Automation & AI Workflow Services | DflexPro Studios',
+    metaDescription:
+      'DflexPro Studios automates repetitive business work — CRM and WhatsApp flows, lead routing, reports, and AI agents that plug into the tools you already use.',
+    desc: 'Copy-pasting between tabs all day? We automate the boring stuff — workflows, integrations, and AI agents that run while you sleep.',
+    intro:
+      "Most teams lose hours every week to work a machine should be doing — copying leads into a CRM, chasing follow-ups, building the same report every Monday. We map those workflows, then automate them end-to-end: integrations between the tools you already use, WhatsApp and email flows, scheduled reports, and AI agents that read, sort, and respond so your team can focus on work that actually needs a human.",
+    tags: ['Workflow Automation', 'AI Agents', 'Integrations', 'WhatsApp & CRM'],
+    included: [
+      'Workflow audit to find the highest-ROI tasks to automate first',
+      'Integrations between your CRM, sheets, email, WhatsApp, and payment tools',
+      'AI agents for lead qualification, support replies, and document processing',
+      'Automated reports and dashboards delivered on a schedule',
+      'Monitoring and alerts so automations never fail silently',
+    ],
+    faqs: [
+      {
+        q: 'What kind of work can actually be automated?',
+        a: 'Anything repetitive and rule-based: lead capture and routing, follow-up messages, invoice and document processing, data syncing between tools, and recurring reports. With AI, a lot of "judgment-light" work like sorting enquiries or drafting replies is now automatable too.',
+      },
+      {
+        q: 'Do we need to replace our existing tools?',
+        a: 'No. We build on top of what you already use — Google Workspace, Zoho, HubSpot, WhatsApp Business, Razorpay, Tally, and so on — and connect them together.',
+      },
+      {
+        q: 'How quickly will we see results?',
+        a: 'Most first automations go live within 1–3 weeks. We start with the workflow that saves the most hours so the ROI is visible fast.',
       },
     ],
   },

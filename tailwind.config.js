@@ -4,18 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#05050a',
-        surface: '#0a0a12',
+        ink: '#07070b',
+        surface: '#0d0d14',
         accent: {
           DEFAULT: '#4f3df6',
           light: '#8b7bff',
           dark: '#1a1145',
         },
         cyber: '#00f0c0',
-        pop: '#e8ff4d',
+        pop: '#d4ff3a',
+        hot: '#ff4fd8',
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'sans-serif'],
+        chunky: ['"Unbounded"', '"Space Grotesk"', 'sans-serif'],
         body: ['"Inter"', 'sans-serif'],
         accent: ['"Instrument Serif"', 'serif'],
         mono: ['"Space Mono"', 'monospace'],
@@ -34,6 +36,7 @@ export default {
         'blob-slow': 'blob 26s ease-in-out infinite',
         float: 'float 6s ease-in-out infinite',
         'spin-slow': 'spin 14s linear infinite',
+        wiggle: 'wiggle 3s ease-in-out infinite',
       },
       keyframes: {
         marquee: {
@@ -48,6 +51,10 @@ export default {
           '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
           '33%': { transform: 'translate(4%, -6%) scale(1.08)' },
           '66%': { transform: 'translate(-3%, 4%) scale(0.95)' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(4deg)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },

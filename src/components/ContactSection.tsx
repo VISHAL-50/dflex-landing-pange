@@ -59,19 +59,17 @@ export default function ContactSection() {
   }
 
   const inputClass =
-    'w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-accent-light/60 focus:bg-white/[0.07]'
+    'w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-pop/70 focus:bg-white/[0.07]'
 
   return (
     <section id="contact" className="relative overflow-hidden bg-ink py-28">
       <div className="absolute left-1/2 top-0 h-[30rem] w-[60rem] -translate-x-1/2 rounded-full bg-accent/20 blur-[140px]" />
 
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-6">
         <div className="mb-16 text-center">
-          <span className="font-mono text-sm uppercase tracking-widest text-accent-light">
-            Let's talk
-          </span>
-          <h2 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            Got a project? Say <span className="font-accent italic text-pop">less.</span>
+          <span className="eyebrow">Let's talk</span>
+          <h2 className="heading mt-5">
+            Got a project? Say <span className="text-pop">less.</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-white/60">
             Fill the brief below or hit us up directly. We read everything — no bots, no
@@ -158,7 +156,7 @@ export default function ContactSection() {
 
             <button
               type="submit"
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-ink transition-transform hover:scale-[1.01] sm:w-auto"
+              className="mt-6 btn-pop w-full sm:w-auto"
             >
               <Send size={16} />
               Send the brief
@@ -184,9 +182,9 @@ export default function ContactSection() {
               <div className="mt-3 flex items-center justify-between gap-3">
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="flex items-center gap-2 text-sm font-medium text-white hover:text-accent-light"
+                  className="flex items-center gap-2 text-sm font-medium text-white hover:text-pop"
                 >
-                  <Mail size={16} className="text-accent-light" />
+                  <Mail size={16} className="text-pop" />
                   {CONTACT_EMAIL}
                 </a>
                 <button
@@ -203,14 +201,14 @@ export default function ContactSection() {
               href={LINKEDIN_URL}
               target="_blank"
               rel="noreferrer"
-              className="group flex items-center justify-between rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-accent-light/40 hover:bg-white/[0.06]"
+              className="group flex items-center justify-between rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-pop/50 hover:bg-white/[0.06]"
             >
               <div>
                 <p className="font-mono text-xs uppercase tracking-wide text-white/40">
                   Follow along
                 </p>
                 <p className="mt-2 flex items-center gap-2 text-sm font-medium text-white">
-                  <Linkedin size={16} className="text-accent-light" />
+                  <Linkedin size={16} className="text-pop" />
                   DflexPro Studios on LinkedIn
                 </p>
               </div>

@@ -4,13 +4,13 @@ export default function QuoteMarquee() {
   const items = [...QUOTES, ...QUOTES]
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-accent-dark via-accent to-accent-dark py-8">
-      <div className="mask-fade-x overflow-hidden">
-        <div className="flex w-max animate-marquee-reverse items-center gap-10">
+    <section className="relative overflow-hidden bg-ink py-10" aria-label="DflexPro mottos">
+      <div className="-mx-4 -rotate-2 border-y-2 border-ink bg-pop py-4 shadow-[0_8px_0_0_#ff4fd8]">
+        <div className="flex w-max animate-marquee-reverse items-center">
           {items.map((q, i) => (
-            <span key={i} className="flex items-center gap-10 whitespace-nowrap">
-              <span className="font-accent text-2xl italic text-white sm:text-3xl">{q}</span>
-              <span className="h-1.5 w-1.5 rounded-full bg-cyber" />
+            <span key={i} className="flex shrink-0 items-center gap-8 whitespace-nowrap pr-8">
+              <span className="font-chunky text-xl font-extrabold uppercase text-ink sm:text-2xl">{q}</span>
+              <span className="text-2xl text-hot">✦</span>
             </span>
           ))}
         </div>

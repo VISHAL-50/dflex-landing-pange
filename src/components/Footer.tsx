@@ -7,7 +7,7 @@ import msmeLogo from '../assets/logo/msme-logo.png'
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-ink py-14">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row">
           <div className="max-w-xs">
             <img
@@ -24,14 +24,14 @@ export default function Footer() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-white/10 p-2.5 text-white/60 transition-colors hover:border-accent-light/50 hover:text-white"
+                className="rounded-full border border-white/10 p-2.5 text-white/60 transition-colors hover:border-pop/50 hover:text-white"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={16} />
               </a>
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="rounded-full border border-white/10 p-2.5 text-white/60 transition-colors hover:border-accent-light/50 hover:text-white"
+                className="rounded-full border border-white/10 p-2.5 text-white/60 transition-colors hover:border-pop/50 hover:text-white"
                 aria-label="Email"
               >
                 <Mail size={16} />

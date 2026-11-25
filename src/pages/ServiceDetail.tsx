@@ -60,7 +60,7 @@ export default function ServiceDetail() {
       <section className="relative overflow-hidden bg-ink py-16 sm:py-20">
         <div className="pointer-events-none absolute right-0 top-0 h-[24rem] w-[24rem] rounded-full bg-accent/15 blur-[120px]" />
 
-        <div className="relative mx-auto max-w-4xl px-6">
+        <div className="relative mx-auto max-w-4xl px-5 sm:px-6">
           <nav className="mb-8 flex items-center gap-2 font-mono text-xs uppercase tracking-wide text-white/40">
             <Link to="/" className="hover:text-white/70">
               Home
@@ -74,12 +74,12 @@ export default function ServiceDetail() {
           </nav>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-accent-light/30 bg-accent/10 px-4 py-1.5 font-mono text-xs uppercase tracking-wide text-accent-light">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-pop/30 bg-pop/10 px-4 py-1.5 font-mono text-xs uppercase tracking-wide text-pop">
               <Layers size={14} />
               Service {service.tag}
             </div>
 
-            <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="font-chunky text-[2.2rem] font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               {service.title}
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/70">{service.intro}</p>
@@ -97,7 +97,7 @@ export default function ServiceDetail() {
 
             <Link
               to="/#contact"
-              className="mt-9 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-ink transition-transform hover:scale-105"
+              className="mt-9 btn-pop"
             >
               Start this project
               <ArrowRight size={17} />
@@ -107,12 +107,10 @@ export default function ServiceDetail() {
       </section>
 
       <section className="border-t border-white/10 bg-surface py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl px-6">
-          <span className="font-mono text-sm uppercase tracking-widest text-accent-light">
-            What's included
-          </span>
-          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            Here's what you actually <span className="font-accent italic text-pop">get.</span>
+        <div className="mx-auto max-w-4xl px-5 sm:px-6">
+          <span className="eyebrow">What's included</span>
+          <h2 className="mt-5 font-chunky text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Here's what you actually <span className="text-pop">get.</span>
           </h2>
 
           <ul className="mt-9 space-y-4">
@@ -127,11 +125,11 @@ export default function ServiceDetail() {
       </section>
 
       <section className="border-t border-white/10 bg-ink py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl px-6">
-          <span className="font-mono text-sm uppercase tracking-widest text-accent-light">FAQ</span>
-          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+        <div className="mx-auto max-w-4xl px-5 sm:px-6">
+          <span className="eyebrow">FAQ</span>
+          <h2 className="mt-5 font-chunky text-3xl font-extrabold tracking-tight sm:text-4xl">
             Questions people actually{' '}
-            <span className="font-accent italic text-pop">ask.</span>
+            <span className="text-pop">ask.</span>
           </h2>
 
           <div className="mt-9 space-y-5">
@@ -140,7 +138,7 @@ export default function ServiceDetail() {
                 key={faq.q}
                 className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
               >
-                <h3 className="font-display text-lg font-semibold">{faq.q}</h3>
+                <h3 className="font-chunky text-base font-bold">{faq.q}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/60">{faq.a}</p>
               </div>
             ))}
@@ -149,11 +147,9 @@ export default function ServiceDetail() {
       </section>
 
       <section className="border-t border-white/10 bg-surface py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl px-6">
-          <span className="font-mono text-sm uppercase tracking-widest text-accent-light">
-            Explore more
-          </span>
-          <h2 className="mt-4 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+        <div className="mx-auto max-w-4xl px-5 sm:px-6">
+          <span className="eyebrow">Explore more</span>
+          <h2 className="mt-5 font-chunky text-2xl font-extrabold tracking-tight sm:text-3xl">
             Other things we build
           </h2>
 
@@ -162,12 +158,12 @@ export default function ServiceDetail() {
               <Link
                 key={s.slug}
                 to={`/services/${s.slug}`}
-                className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 transition-colors hover:border-accent-light/40 hover:bg-white/[0.06]"
+                className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 transition-colors hover:border-pop/50 hover:bg-white/[0.06]"
               >
                 <span className="font-display font-semibold">{s.title}</span>
                 <ArrowUpRight
                   size={16}
-                  className="text-white/40 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent-light"
+                  className="text-white/40 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-pop"
                 />
               </Link>
             ))}

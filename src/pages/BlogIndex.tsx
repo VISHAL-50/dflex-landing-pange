@@ -29,13 +29,11 @@ export default function BlogIndex() {
       />
 
       <section className="relative bg-ink py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <span className="font-mono text-sm uppercase tracking-widest text-accent-light">
-            Insights
-          </span>
-          <h1 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+        <div className="mx-auto max-w-6xl px-5 sm:px-6">
+          <span className="eyebrow">Insights</span>
+          <h1 className="heading mt-5">
             Things we've learned{' '}
-            <span className="font-accent italic text-pop">shipping.</span>
+            <span className="text-pop">shipping.</span>
           </h1>
           <p className="mt-5 max-w-xl text-white/60">
             No-fluff writing on building software, choosing who to build it with, and fixing it
@@ -53,10 +51,10 @@ export default function BlogIndex() {
               >
                 <Link
                   to={`/blog/${post.slug}`}
-                  className="group flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-7 transition-colors hover:border-accent-light/40 hover:bg-white/[0.06]"
+                  className="group flex h-full flex-col justify-between card p-7"
                 >
                   <div>
-                    <span className="font-mono text-xs uppercase tracking-wide text-accent-light">
+                    <span className="font-mono text-xs uppercase tracking-wide text-pop">
                       {post.category}
                     </span>
                     <h2 className="mt-3 font-display text-xl font-semibold leading-snug">
@@ -82,7 +80,7 @@ export default function BlogIndex() {
                     </span>
                     <ArrowUpRight
                       size={14}
-                      className="text-white/40 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent-light"
+                      className="text-white/40 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-pop"
                     />
                   </div>
                 </Link>

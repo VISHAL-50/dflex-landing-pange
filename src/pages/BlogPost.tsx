@@ -70,7 +70,7 @@ export default function BlogPost() {
       />
 
       <article className="bg-ink py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-6">
+        <div className="mx-auto max-w-3xl px-5 sm:px-6">
           <nav className="mb-8 flex items-center gap-2 font-mono text-xs uppercase tracking-wide text-white/40">
             <Link to="/" className="hover:text-white/70">
               Home
@@ -81,7 +81,7 @@ export default function BlogPost() {
             </Link>
           </nav>
 
-          <span className="font-mono text-xs uppercase tracking-wide text-accent-light">
+          <span className="font-mono text-xs uppercase tracking-wide text-pop">
             {post.category}
           </span>
           <h1 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
@@ -118,7 +118,7 @@ export default function BlogPost() {
             </p>
             <Link
               to="/#contact"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-ink transition-transform hover:scale-105"
+              className="mt-6 btn-pop"
             >
               Start the conversation
               <ArrowRight size={17} />
@@ -127,7 +127,7 @@ export default function BlogPost() {
 
           {otherPosts.length > 0 && (
             <div className="mt-14 border-t border-white/10 pt-10">
-              <h3 className="font-mono text-sm uppercase tracking-widest text-accent-light">
+              <h3 className="font-mono text-sm uppercase tracking-widest text-pop">
                 More from the blog
               </h3>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -135,7 +135,7 @@ export default function BlogPost() {
                   <Link
                     key={p.slug}
                     to={`/blog/${p.slug}`}
-                    className="group rounded-xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-accent-light/40 hover:bg-white/[0.06]"
+                    className="group rounded-xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-pop/50 hover:bg-white/[0.06]"
                   >
                     <span className="font-mono text-xs uppercase tracking-wide text-white/40">
                       {p.category}
