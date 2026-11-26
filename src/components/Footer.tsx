@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { Linkedin, Mail } from 'lucide-react'
-import { CONTACT_EMAIL, LINKEDIN_URL, NAV_LINKS } from '../data/content'
+import { Instagram, Linkedin, Mail } from 'lucide-react'
+import { CONTACT_EMAIL, INSTAGRAM_URL, LINKEDIN_URL, NAV_LINKS } from '../data/content'
 import logo from '../assets/logo/dflexpro-dark.png'
 import msmeLogo from '../assets/logo/msme-logo.png'
 
@@ -28,6 +28,15 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={16} />
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-white/10 p-2.5 text-white/60 transition-colors hover:border-pop/50 hover:text-white"
+                aria-label="Instagram"
+              >
+                <Instagram size={16} />
               </a>
               <a
                 href={`mailto:${CONTACT_EMAIL}`}

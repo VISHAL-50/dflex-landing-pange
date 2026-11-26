@@ -1,5 +1,6 @@
 export const CONTACT_EMAIL = 'dflexprostudios@gmail.com'
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/dflexpro-studios/'
+export const INSTAGRAM_URL = 'https://www.instagram.com/dflexpro.in/'
 export const SITE_URL = 'https://www.dflexpro.in'
 // Cal.com booking page for the free 15-min call
 export const BOOKING_URL = 'https://cal.com/dflexpro-studios/15min'

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import {
   Mail,
   Linkedin,
+  Instagram,
   Copy,
   Check,
   Send,
@@ -25,6 +26,7 @@ import {
   BUDGET_RANGES,
   CONTACT_EMAIL,
   GUARANTEES,
+  INSTAGRAM_URL,
   LINKEDIN_URL,
   PROJECT_TYPES,
 } from '../data/content'
@@ -518,23 +520,31 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <a
-              href={LINKEDIN_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="group flex items-center justify-between rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-pop/50 hover:bg-white/[0.06]"
-            >
-              <div>
-                <p className="font-mono text-xs uppercase tracking-wide text-white/40">
-                  Follow along
-                </p>
-                <p className="mt-2 flex items-center gap-2 text-sm font-medium text-white">
-                  <Linkedin size={16} className="text-pop" />
-                  DflexPro Studios on LinkedIn
-                </p>
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+              <p className="font-mono text-xs uppercase tracking-wide text-white/40">
+                Follow along
+              </p>
+              <div className="mt-3 space-y-1">
+                {[
+                  { href: LINKEDIN_URL, icon: Linkedin, label: 'DflexPro Studios on LinkedIn' },
+                  { href: INSTAGRAM_URL, icon: Instagram, label: '@dflexpro.in on Instagram' },
+                ].map(({ href, icon: Icon, label }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group -mx-3 flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/[0.06] hover:text-pop"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Icon size={16} className="text-pop" />
+                      {label}
+                    </span>
+                    <span className="text-white/30 transition-transform group-hover:translate-x-1">→</span>
+                  </a>
+                ))}
               </div>
-              <span className="text-white/30 transition-transform group-hover:translate-x-1">→</span>
-            </a>
+            </div>
 
             <div className="rounded-3xl border border-dashed border-white/15 bg-white/[0.02] p-6 text-sm text-white/60">
               Registered MSME · Remote-first team · Replies within 48 hours, usually way sooner.
