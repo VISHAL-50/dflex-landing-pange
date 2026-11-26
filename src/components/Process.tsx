@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { PROCESS } from '../data/content'
+import { StackCard, StackGroup } from './StackCards'
 
 const COLORS = ['text-pop', 'text-hot', 'text-cyber', 'text-accent-light']
 
@@ -14,10 +15,10 @@ export default function Process() {
           </h2>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <StackGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {PROCESS.map((step, i) => (
+            <StackCard key={step.step} index={i}>
             <motion.div
-              key={step.step}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
@@ -28,8 +29,9 @@ export default function Process() {
               <h3 className="mt-5 font-chunky text-lg font-bold">{step.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/60">{step.desc}</p>
             </motion.div>
+            </StackCard>
           ))}
-        </div>
+        </StackGroup>
       </div>
     </section>
   )

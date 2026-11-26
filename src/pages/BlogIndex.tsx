@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Calendar, Clock } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import Seo from '../components/Seo'
+import { StackCard, StackGroup } from '../components/StackCards'
 import { BLOG_POSTS } from '../data/blogPosts'
 import { SITE_URL } from '../data/content'
 
@@ -40,10 +41,11 @@ export default function BlogIndex() {
             when it goes sideways.
           </p>
 
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <StackGroup className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {BLOG_POSTS.map((post, i) => (
+              <StackCard key={post.slug} index={i}>
               <motion.div
-                key={post.slug}
+                className="flex flex-col"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
@@ -51,7 +53,7 @@ export default function BlogIndex() {
               >
                 <Link
                   to={`/blog/${post.slug}`}
-                  className="group flex h-full flex-col justify-between card p-7"
+                  className="group flex flex-1 flex-col justify-between card p-7"
                 >
                   <div>
                     <span className="font-mono text-xs uppercase tracking-wide text-pop">
@@ -85,8 +87,9 @@ export default function BlogIndex() {
                   </div>
                 </Link>
               </motion.div>
+              </StackCard>
             ))}
-          </div>
+          </StackGroup>
         </div>
       </section>
     </div>

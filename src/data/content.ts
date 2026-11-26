@@ -1,6 +1,49 @@
 export const CONTACT_EMAIL = 'dflexprostudios@gmail.com'
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/dflexpro-studios/'
+export const INSTAGRAM_URL = 'https://www.instagram.com/dflexpro.in/'
 export const SITE_URL = 'https://www.dflexpro.in'
+// Cal.com booking page for the free 15-min call
+export const BOOKING_URL = 'https://cal.com/dflexpro-studios/15min'
+
+// Promises shown above the contact form. Keep these in sync with the FAQ answers.
+export const GUARANTEES = [
+  { icon: 'code', title: 'You own the code', text: '100% yours once paid' },
+  { icon: 'wallet', title: 'Milestone payments', text: 'Pay as work is delivered' },
+  { icon: 'shield', title: 'NDA on request', text: 'Your idea stays private' },
+  { icon: 'sparkles', title: '1 year of free tweaks', text: 'Minor changes after launch' },
+  { icon: 'clock', title: 'Reply within 48h', text: 'Usually way sooner' },
+]
+
+export const HOME_FAQS = [
+  {
+    q: 'How much will my project cost?',
+    a: "It depends on what you need, so we don't push one-size-fits-all packages. Tell us your idea and we'll send a clear, fixed quote after a quick free call. Projects start from under $100, and you can pay in any currency.",
+  },
+  {
+    q: "I'm not technical. Can I still work with you?",
+    a: "Absolutely — most of our clients aren't. We explain everything in plain language, show you progress every week on a live link you can click around, and you can message the people actually building it.",
+  },
+  {
+    q: 'How long will it take?',
+    a: 'Simple websites usually take 1–2 weeks, and most MVPs and custom apps take 4–8 weeks. You get an exact timeline with your quote, before any work starts.',
+  },
+  {
+    q: 'How do payments work?',
+    a: 'We split payments into milestones, so you only pay as work gets delivered — never everything upfront. We accept payment in any currency.',
+  },
+  {
+    q: 'Do I own the code and design?',
+    a: 'Yes. Once the project is paid for, the code, designs and everything we build are 100% yours.',
+  },
+  {
+    q: 'What happens after launch?',
+    a: "We don't disappear. You get 1 year of free minor changes (like text, image or small design tweaks), and we offer ongoing support and maintenance if you need bigger updates or new features.",
+  },
+  {
+    q: 'My project is stuck with another developer. Can you help?',
+    a: "Yes — that's one of our specialities. We audit what's already built, tell you honestly what's salvageable, and take it over the finish line.",
+  },
+]
 
 export const PROJECT_TYPES = [
   'Enterprise Software',
@@ -13,12 +56,12 @@ export const PROJECT_TYPES = [
 ]
 
 export const BUDGET_RANGES = [
-  'Under ₹10k',
-  '₹10k – ₹20k',
-  '₹20k – ₹50k',
-  '₹50k – ₹1L',
-  '₹1L – ₹2L',
-  '₹2L+',
+  'Under $100',
+  '$100 – $200',
+  '$200 – $500',
+  '$500 – $1,000',
+  '$1,000 – $2,000',
+  '$2,000+',
   'Not sure yet',
 ]
 

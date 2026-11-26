@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
   ArrowUpRight,
@@ -11,7 +10,9 @@ import {
   Wrench,
   type LucideIcon,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { SERVICES } from '../data/content'
+import { StackCard, StackGroup } from './StackCards'
 
 export const SERVICE_ICONS: Record<string, LucideIcon> = {
   'enterprise-software-development': Building2,
@@ -44,14 +45,15 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <StackGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {/* Featured: Automation */}
+          <StackCard index={0} className="sm:col-span-2">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.5 }}
-            className="group relative overflow-hidden rounded-3xl border-2 border-ink bg-pop p-7 text-ink shadow-[6px_6px_0_0_#ff4fd8] sm:col-span-2 sm:p-9"
+            className="group relative overflow-hidden rounded-3xl border-2 border-ink bg-pop p-7 text-ink shadow-[6px_6px_0_0_#ff4fd8] sm:p-9"
           >
             <div className="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full bg-hot/40 blur-3xl" />
             <div className="relative flex flex-wrap items-center gap-3">
@@ -79,18 +81,20 @@ export default function Services() {
               <ArrowUpRight size={16} strokeWidth={2.5} />
             </Link>
           </motion.div>
+          </StackCard>
 
           {rest.map((service, i) => {
             const Icon = SERVICE_ICONS[service.slug] ?? Layers
             return (
+              <StackCard key={service.slug} index={i + 1}>
               <motion.div
-                key={service.slug}
+                className="flex flex-col"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
               >
-                <Link to={`/services/${service.slug}`} className="card group flex h-full flex-col p-7">
+                <Link to={`/services/${service.slug}`} className="card group flex flex-1 flex-col p-7">
                   <div className="flex items-start justify-between">
                     <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-pop transition-all group-hover:rotate-[-8deg] group-hover:bg-pop group-hover:text-ink">
                       <Icon size={20} />
@@ -114,16 +118,18 @@ export default function Services() {
                   </span>
                 </Link>
               </motion.div>
+              </StackCard>
             )
           })}
 
+          <StackCard index={rest.length + 1}>
           <motion.a
             href="#contact"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.5, delay: 0.16 }}
-            className="group flex flex-col justify-between rounded-3xl border-2 border-dashed border-white/20 p-7 transition-colors hover:border-hot hover:bg-hot/10"
+            className="group flex flex-col justify-between rounded-3xl border-2 border-dashed border-white/20 p-7 transition-colors max-sm:border-white/25 max-sm:bg-[#0e0e15] max-sm:shadow-[0_-22px_44px_-18px_rgba(0,0,0,0.95)] hover:border-hot hover:bg-hot/10"
           >
             <span className="text-4xl">🤔</span>
             <div>
@@ -134,7 +140,8 @@ export default function Services() {
               </span>
             </div>
           </motion.a>
-        </div>
+          </StackCard>
+        </StackGroup>
       </div>
     </section>
   )

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import { CLIENTS } from '../data/content'
+import { StackCard, StackGroup } from './StackCards'
 
 const ACCENTS = ['bg-pop', 'bg-hot', 'bg-cyber', 'bg-accent-light']
 
@@ -21,12 +22,12 @@ export default function Clients() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <StackGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {CLIENTS.map((client, i) => {
             const Wrapper = client.url ? motion.a : motion.div
             return (
+              <StackCard key={client.name} index={i}>
               <Wrapper
-                key={client.name}
                 {...(client.url ? { href: client.url, target: '_blank', rel: 'noopener' } : {})}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -65,9 +66,10 @@ export default function Clients() {
                   )}
                 </div>
               </Wrapper>
+              </StackCard>
             )
           })}
-        </div>
+        </StackGroup>
       </div>
     </section>
   )

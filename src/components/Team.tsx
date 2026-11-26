@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { Code2, Palette, Clapperboard, Megaphone, type LucideIcon } from 'lucide-react'
+import { Clapperboard, Code2, Megaphone, Palette, type LucideIcon } from 'lucide-react'
 import { TEAM } from '../data/content'
+import { StackCard, StackGroup } from './StackCards'
 
 const ICONS: Record<string, LucideIcon> = {
   code: Code2,
@@ -28,12 +29,12 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <StackGroup className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {TEAM.map((member, i) => {
             const Icon = ICONS[member.icon]
             return (
+              <StackCard key={member.role} index={i}>
               <motion.div
-                key={member.role}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
@@ -46,9 +47,10 @@ export default function Team() {
                 <h3 className="mt-5 font-chunky text-base font-bold">{member.role}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/60">{member.desc}</p>
               </motion.div>
+              </StackCard>
             )
           })}
-        </div>
+        </StackGroup>
       </div>
     </section>
   )

@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowRight, Zap } from 'lucide-react'
+import { ArrowRight, CalendarDays, Zap } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { BOOKING_URL } from '../data/content'
 import AuroraBackground from './AuroraBackground'
 
 const WORDS = ['ships.', 'scales.', 'automates.', 'slaps.']
@@ -58,8 +59,9 @@ export default function Hero() {
               Let's build something
               <ArrowRight size={17} strokeWidth={2.5} className="transition-transform group-hover:translate-x-1" />
             </a>
-            <a href="#services" className="btn-ghost">
-              See what we do
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+              <CalendarDays size={17} />
+              Book a free call
             </a>
           </div>
 

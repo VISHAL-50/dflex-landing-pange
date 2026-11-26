@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
-import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import MobileCtaBar from '../components/MobileCtaBar'
+import Navbar from '../components/Navbar'
 import ScrollToHash from '../components/ScrollToHash'
 
 export default function RootLayout() {
@@ -12,6 +13,7 @@ export default function RootLayout() {
         <Outlet />
       </main>
       <Footer />
+      <MobileCtaBar />
     </div>
   )
 }
